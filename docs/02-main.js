@@ -1,3 +1,28 @@
+function isFormValid(form) {
+    if(!form.checkValidity()) return false;
+    return true;
+}
+
+function setConfirmation() {
+    sessionStorage.setItem("firstName", document.getElementById("firstName").value);
+    sessionStorage.setItem("lastName", document.getElementById("lastName").value);
+    sessionStorage.setItem("address1", document.getElementById("address1").value);
+    sessionStorage.setItem("address2", document.getElementById("address2").value);
+    sessionStorage.setItem("plz", document.getElementById("plz").value);
+    sessionStorage.setItem("city", document.getElementById("city").value);
+    sessionStorage.setItem("email", document.getElementById("email").value);
+
+    let select = document.getElementById("state");
+    let value = select.options[select.selectedIndex].value;
+    sessionStorage.setItem("state", value);
+
+    window.location.assign("03-confirmation.html");
+}
+
+
+
+
+/*
 let firstName = document.getElementById("firstName").value;
 let lastName = document.getElementById("lastName").value;
 let address1 = document.getElementById("address1").value;
@@ -5,9 +30,9 @@ let address2 = document.getElementById("address2").value;
 let plz = document.getElementById("plz").value;
 let city = document.getElementById("city").value;
 let email = document.getElementById("email").value;
-
-// window.location.assign("03-confirmation.html"); "Wechsel auf Seite 3)(unbenutzt)"
-
+*/
+//window.location.assign("03-confirmation.html"); "Wechsel auf Seite 3)(unbenutzt)"
+/*
 // alle Felder müssen in Booking ausgefüllt werden:
 function validate() {
     if (firstNameValue === "") {
@@ -48,7 +73,7 @@ function validate() {
     } else {
         setSuccessFor(email);
     }
-
+*/
     /* Variante mit Error-Text & Symbol in shortDesc (unbenutzt):
     function setErrorFor(input, message) {
         const formControl = input.parentElement;
@@ -61,7 +86,7 @@ function validate() {
         formControl.className = "form-control success";
         }
         return valid;*/
-}
+//}
     
     /* Email muss in gültiger Form sein (unbenutzt):
     function isValidEmail(email) {
@@ -72,33 +97,28 @@ function validate() {
     /* PLZ muss zwingend vierstellig sein (unbenutzt):
         let x = document.getElementById("plz").value;
         let text;
-        if (isNaN(x) || x < 4 || x > 4) {
+        if (isNaN(plz) || x < 4 || x > 4) {
             text = "Ungültig / Invalid";
         } else {
             text = "Input OK";
         }
-        document.getElementById("yourBooking").innerHTML = text;*/
+        document.getElementById("form").innerHTML = text;
+    */ 
 
     /* Kurs muss in Booking ausgewählt werden (Select):
     let valSelect = document.getElementById("FormControlSelect1").selectedOptions[0].value;
     if (valSelect === "0") {
         alert("Bitte auswählen / Make a Choice");
         return false;
-    }*/
+    }
 
-    /* AGB müssen in Booking akzeptiert werden (Checkbox):
+    // AGB müssen in Booking akzeptiert werden (Checkbox):
     let valCheckbox = document.getElementById("agbCheck").checked;
     if (!valCheckbox) {
         alert("Bitte bestätigen / Please confirm");
         return false;
-    }*/
-
-document.getElementById("form").addEventListener("submit", function(event){
-    event.preventDefault();
-    event.stopPropagation();
-
-    doAllWork();
-});
+    }
+    */
 
 
 
