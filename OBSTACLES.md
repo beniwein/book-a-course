@@ -7,5 +7,8 @@ Seite2/Booking) Probleme zu anfangs - im Sinne von, wie das JavaScript aufsetzen
 Einige Varianten ausprobiert. Muss meinerseits noch bereinigt werden. Resultat nicht zufriedenstellend, brauche noch einige 
 Anläufe & mehr Zeit zum Thema JavaScript (Verständnis / Nachvollziehbakeit: "roter Faden").
 
-Seite3/Confirmation) Lösung pendent: Habe hier ein fieldset-disabled aufgesetzt. 'Disabled', da die Angaben im Nachhinein nicht
-mehr bearbeitet werden dürfen. Autofill funktioniert noch nicht. 
+Seite3/Confirmation) Lösung pendent: Habe hier ein fieldset aufgesetzt. Autofill funktioniert noch nicht. 
+
+Konnte ich nicht - wie erhofft - lösen: 02-booking.html, Zeile 50 / 02-main.js, Zeile 83. Es erscheint folgender Error:
+'A return statement can be only used within a function body'. Habe es in anderen Weisen ausprobiert, hingegen funktioniert
+dann die 'Kommunikation' von Javascript mit HTML nicht wirklich. 
