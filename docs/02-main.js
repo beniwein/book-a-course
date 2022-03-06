@@ -6,8 +6,6 @@ let plz = document.getElementById("plz").value;
 let city = document.getElementById("city").value;
 let email = document.getElementById("email").value;
 
-// window.location.assign("03-confirmation.html"); "Wechsel auf Seite 3)(unbenutzt)"
-
 // alle Felder müssen in Booking ausgefüllt werden:
 function validate() {
     if (firstNameValue === "") {
@@ -49,56 +47,54 @@ function validate() {
         setSuccessFor(email);
     }
 
-    /* Variante mit Error-Text & Symbol in shortDesc (unbenutzt):
+    // Variante mit Error-Text & Symbol in shortDesc (unbenutzt):
     function setErrorFor(input, message) {
         const formControl = input.parentElement;
-        const small = form-Control.querySelector("small");
+        const small = form - Control.querySelector("small");
         formControl.className = "form-control error";
         small.innerText = message;
     }
     function setSuccessFor(input) {
         const formControl = input.parentElement;
         formControl.className = "form-control success";
-        }
-        return valid;*/
+    }
+    return valid;
 }
-    
-    /* Email muss in gültiger Form sein (unbenutzt):
-    function isValidEmail(email) {
+
+// Email muss in gültiger Form sein (unbenutzt):
+function isValidEmail(email) {
     const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     return re.test(String(email).toLowerCase());
-}*/
+}
 
-    /* PLZ muss zwingend vierstellig sein (unbenutzt):
-        let x = document.getElementById("plz").value;
-        let text;
-        if (isNaN(x) || x < 4 || x > 4) {
-            text = "Ungültig / Invalid";
-        } else {
-            text = "Input OK";
-        }
-        document.getElementById("yourBooking").innerHTML = text;*/
+/* PLZ muss zwingend vierstellig sein (unbenutzt / führt dazu, dass im Output/Browser 
+'Ungültig / Invalid erscheint, anstelle des Anmeldeformulars):*/
+/*
+let x = document.getElementById("plz").value;
+let text;
+if (isNaN(plz) || x < 4 || x > 4) {
+    text = "Ungültig / Invalid";
+} else {
+    text = "Input OK";
+}
+document.getElementById("form").innerHTML = text;
+*/
 
-    /* Kurs muss in Booking ausgewählt werden (Select):
-    let valSelect = document.getElementById("FormControlSelect1").selectedOptions[0].value;
-    if (valSelect === "0") {
-        alert("Bitte auswählen / Make a Choice");
-        return false;
-    }*/
+// FEHLERMELDUNG für Select & Checkbox: return statement, usage only in function body.
+/*
+// Kurs muss in Booking ausgewählt werden (Select):
+let valSelect = document.getElementById("FormControlSelect1").selectedOptions[0].value;
+if (valSelect === "0") {
+    alert("Bitte auswählen / Make a Choice");
+    return false;
+}
 
-    /* AGB müssen in Booking akzeptiert werden (Checkbox):
-    let valCheckbox = document.getElementById("agbCheck").checked;
-    if (!valCheckbox) {
-        alert("Bitte bestätigen / Please confirm");
-        return false;
-    }*/
-
-document.getElementById("form").addEventListener("submit", function(event){
-    event.preventDefault();
-    event.stopPropagation();
-
-    doAllWork();
-});
-
+// AGB müssen in Booking akzeptiert werden (Checkbox):
+let valCheckbox = document.getElementById("agbCheck").checked;
+if (!valCheckbox) {
+    alert("Bitte bestätigen / Please confirm");
+    return false;
+}
+*/
 
 
