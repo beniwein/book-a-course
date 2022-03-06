@@ -45,31 +45,31 @@
       <h2 class="m-1"> Anmeldung / Booking
       </h2>
       <div class="container pb-5 w-80">
-        <form id="form" name="form" action="02-booking.html";>
+        <form id="form" name="form">
           <div class="row g-3">
             <div class="col">
               <!-- Vor-/Nachname (mandatory) auf einer Zeile -->
               <label for="firstName">Vorname*</label>
               <input type="text" class="form-control" maxlenght="30" id="firstName">
-              <small id="shortDesc" class="form-text text-muted">first name*</small>
+              <small id="shortDesc" class="form-text text-muted">first name*</small required>
             </div>
             <div class="col">
               <label for="lastName">Nachname*</label>
               <input type="text" class="form-control" maxlenght="30" id="lastName">
-              <small id="shortDesc" class="form-text text-muted">last name*</small>
+              <small id="shortDesc" class="form-text text-muted">last name*</small required>
             </div>
           </div>
           <!-- Email-Adresse muss @-Symbol enthalten sein -->
           <div class="form-group">
             <label for="email"></label>
             <input type="text" class="form-control" placeholder=E-Mail* maxlenght="30" id="email"
-              aria-describedby="Email">
+              aria-describedby="Email" required>
             <small id="shortDesc" class="form-text text-muted">Schriftverkehr / correspondence*</small>
           </div>
           <!-- Adresszeile 1 (mandatory), Adresszeile 2 (optional)-->
           <div class="form-group">
             <label for="address1">Adresszeile 1*</label>
-            <input type="text" class="form-control" maxlenght="30" id="address1">
+            <input type="text" class="form-control" maxlenght="30" id="address1" required>
             <small id="shortDesc" class="form-text text-muted">address #1*</small>
           </div>
           <div class="form-group">
@@ -81,18 +81,18 @@
           <div class="row g-3">
             <div class="col-4">
               <label for="plz">Postleitzahl*</label></label>
-              <input type="text" class="form-control" placeholder="PLZ / ZIP" maxlenght="30" id="plz">
+              <input type="text" class="form-control" placeholder="PLZ / ZIP" maxlenght="30" id="plz" required>
               <small id="shortDesc" class="form-text text-muted">postal code*</small>
             </div>
             <div class="col-8">
               <label for="city">Wohnort*</label>
-              <input type="text" class="form-control" maxlenght="30" id="city">
+              <input type="text" class="form-control" maxlenght="30" id="city" required>
               <small id="shortDesc" class="form-text text-muted">domicile*</small>
             </div>
           </div>
           <!-- Kursauswahl gemäss Homepage -->
           <div class="form-group">
-            <label for="FormControlSelect1">Kurswahl*</label>
+            <label id="FormControlSelect1">Kurswahl*</label>
             <select class="form-control" id="FormControlSelect1">
               <option value="0" selected>Auswahl / Choice</option>
               <option value="1">Deutsch Bootcamp</option>
@@ -105,7 +105,7 @@
           </div>
           <!-- Akzeptanz der AGB (mandatory), Newsletter (optional) -->
           <div class="form-check">
-            <input type="checkbox" class="form-check-input" id="agbCheck">
+            <input type="checkbox" class="form-check-input" id="agbCheck" required>
             <label class="form-check-label" for="agbCheck">Ich akzeptiere die AGB's* / I agree to the TC's*</label>
           </div>
           <div class="form-check">

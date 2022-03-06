@@ -1,0 +1,1 @@
+// Funktion fehlt: Button drücken um Kursauswahl auf 02-booking.html zu triggern.
