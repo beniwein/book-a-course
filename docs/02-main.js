@@ -47,16 +47,16 @@ function validate() {
         setSuccessFor(email);
     }
 
-// Variante mit Error-Text & Symbol in shortDesc (unbenutzt):
-function setErrorFor(input, message) {
-    const formControl = input.parentElement;
-    const small = form - Control.querySelector("small");
-    formControl.className = "form-control error";
-    small.innerText = message;
+    // Variante mit Error-Text & Symbol in shortDesc (unbenutzt):
+    function setErrorFor(input, message) {
+        const formControl = input.parentElement;
+        const small = form - Control.querySelector("small");
+        formControl.className = "form-control error";
+        small.innerText = message;
     }
-function setSuccessFor(input) {
-    const formControl = input.parentElement;
-    formControl.className = "form-control success";
+    function setSuccessFor(input) {
+        const formControl = input.parentElement;
+        formControl.className = "form-control success";
     }
     return valid;
 }
@@ -67,7 +67,9 @@ function isValidEmail(email) {
     return re.test(String(email).toLowerCase());
 }
 
-// PLZ muss zwingend vierstellig sein (unbenutzt):
+/* PLZ muss zwingend vierstellig sein (unbenutzt / führt dazu, dass im Output/Browser 
+'Ungültig / Invalid erscheint, anstelle des Anmeldeformulars):*/
+/*
 let x = document.getElementById("plz").value;
 let text;
 if (isNaN(plz) || x < 4 || x > 4) {
@@ -76,6 +78,7 @@ if (isNaN(plz) || x < 4 || x > 4) {
     text = "Input OK";
 }
 document.getElementById("form").innerHTML = text;
+*/
 
 // FEHLERMELDUNG für Select & Checkbox: return statement, usage only in function body.
 /*
