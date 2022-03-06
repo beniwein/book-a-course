@@ -5,7 +5,7 @@ Seite1/Home) Lösung pendent: beliebiger 'Book now'-Button drücken, dannach ste
 
 Seite2/Booking) Probleme zu anfangs - im Sinne von, wie das JavaScript aufsetzen, resp. 'return validate' in der HTML-Form.
 Einige Varianten ausprobiert. Muss meinerseits noch bereinigt werden. Resultat nicht zufriedenstellend, brauche noch einige 
-Anläufe & mehr Zeit zum Thema JavaScript (Verständnis / Nachvollziehbakeit: "roter Faden").
+Anläufe & mehr Zeit zum Einstieg/Thema JavaScript (Verständnis / Nachvollziehbakeit: "roter Faden").
 
 Seite3/Confirmation) Lösung pendent: Habe hier ein fieldset aufgesetzt. Autofill funktioniert noch nicht. 
 
